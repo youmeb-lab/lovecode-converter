@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var path = require('path');
+var argv = require('optimist')
+  .demand('f')
+  .alias('f', 'file')
+  .default('out', 'lovecode.json')
+  .alias('o', 'out')
+  .argv;
+
+var convert = require('../lib');
+
+var input = path.resolve(process.cwd(), argv.file);
+var output = path.resolve(process.cwd(), argv.out);
+
+convert(input)
+  .then(function (data) {
+    return new Promise(function (resolve, reject) {
+      fs.writeFile(output, JSON.stringify(data), function (err) {
+        err ? reject(err) : resolve();
+      });
+    });
+  })
+  .catch(function (err) {
+    console.log();
+    console.log(err.stack.replace(/^/gm, '  '));
+    console.log();
+  });

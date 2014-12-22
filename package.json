@@ -1,0 +1,16 @@
+{
+  "name": "lovecode-converter",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Po-Ying Chen <poying.me@gmail.com> (陳柏穎)",
+  "license": "MIT",
+  "dependencies": {
+    "optimist": "^0.6.1",
+    "pdf2json": "^0.7.1",
+    "urlencode": "^0.2.0"
+  },
+  "devDependencies": {}
+}
