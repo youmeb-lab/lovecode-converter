@@ -5,6 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "lovecode-convert": "./bin/lovecode-convert"
+  },
   "author": "Po-Ying Chen <poying.me@gmail.com> (陳柏穎)",
   "license": "MIT",
   "dependencies": {
