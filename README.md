@@ -3,9 +3,6 @@
 [社福團體愛心碼清冊下載](https://www.einvoice.nat.gov.tw/APMEMBERVAN/XcaOrgPreserveCodeQuery/XcaOrgPreserveCodeQuery)
 
 ```bash
-$ lovecode-convert -f ./data.pdf
-```
-
-```bash
 $ npm i -g youmeb-lab/lovecode-converter
+$ lovecode-convert -f ./data.pdf
 ```
